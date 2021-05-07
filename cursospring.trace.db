@@ -1,0 +1,4 @@
+2021-05-05 22:00:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CONTACTO" no encontrada
+Table "CONTACTO" not found; SQL statement:
+select contacto0_.id as id1_0_, contacto0_.apellidos as apellido2_0_, contacto0_.nombre as nombre3_0_, contacto0_.telefono as telefono4_0_ from contacto contacto0_ [42102-200]

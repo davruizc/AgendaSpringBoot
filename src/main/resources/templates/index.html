@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<th:block th:include="fragments/head.html :: head"></th:block>
+</head>
+<body>
+	<nav th:replace="fragments/navigation.html :: navigation" />
+	
+	<main class="container">
+		<div class="bg-light p-5 rounded">
+	  
+	  	<h1>Mis contactos</h1>
+	  
+		<table class="table table-striped">
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Apellidos</th>
+				<th>Teléfono</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr th:each="contacto : ${lista}">
+				<td th:text="${contacto.id}">Id contacto</td>
+				<td th:text="${contacto.nombre}">Nombre contacto</td>
+				<td th:text="${contacto.apellidos}">Apellidos contacto</td>
+				<td th:text="${contacto.telefono}">Telefono contacto</td>
+				<td><a th:href="@{/edit/}+${contacto.id}">Editar</a></td>
+				<td><a th:href="@{/del/}+${contacto.id}">Eliminar</a></td>
+			</tr>
+		</table>
+	
+		</div>
+	</main>
+	
+	<footer th:replace="fragments/footer.html :: footer" />
+</body>
+</html>
